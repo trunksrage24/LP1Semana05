@@ -36,10 +36,10 @@ namespace Tempo
             
             //show timer in console crono1
             string timeElapsed1 = String.Format("{0:00}:{1:00}",
-                ElapsedTime1.Seconds, ElapsedTime1.Milliseconds);
+                ElapsedTime1.Seconds, ElapsedTime1.Milliseconds/10);
             
             //show timer in console crono2
-            string timeElapsed2 = String.Format("{0:00}:{1:00}", ElapsedTime2.Seconds, ElapsedTime2.Milliseconds);
+            string timeElapsed2 = String.Format("{0:00}:{1:00}", ElapsedTime2.Seconds, ElapsedTime2.Milliseconds/10);
             
             //show in console
             Console.WriteLine("Runtime crono1 " + timeElapsed1);
