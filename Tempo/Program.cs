@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Tempo
 {
@@ -21,14 +22,17 @@ namespace Tempo
             crono2.Start();
             
             //pause for 300ms crono2
-            Thread.sleep(300);
+            Thread.Sleep(300);
             
-            //stop both stopwatches
-            Stopwatch.Stop();
+            //stop crono1
+            crono1.Stop();
+
+            //stop crono2
+            crono2.Stop();
             
             //show time for each
-            ElapsedTime1 = crono1.Elapsed;
-            ElapsedTime2 = crono2.Elapsed;
+            TimeSpan ElapsedTime1 = crono1.Elapsed;
+            TimeSpan ElapsedTime2 = crono2.Elapsed;
             
             //show timer in console crono1
             string timeElapsed1 = String.Format("{0:00}:{1:00}:{2:00}:{3:00}",
