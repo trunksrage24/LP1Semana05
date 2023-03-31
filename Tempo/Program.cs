@@ -35,12 +35,11 @@ namespace Tempo
             TimeSpan ElapsedTime2 = crono2.Elapsed;
             
             //show timer in console crono1
-            string timeElapsed1 = String.Format("{0:00}:{1:00}:{2:00}:{3:00}",
-                ElapsedTime1.Hours, ElapsedTime1.Minutes, ElapsedTime1.Seconds, ElapsedTime1.Milliseconds / 10);
+            string timeElapsed1 = String.Format("{0:00}:{1:00}",
+                ElapsedTime1.Seconds, ElapsedTime1.Milliseconds);
             
             //show timer in console crono2
-            string timeElapsed2 = String.Format("{0:00}:{1:00}:{2:00}:{3:00}",
-                ElapsedTime2.Hours, ElapsedTime2.Minutes, ElapsedTime2.Seconds, ElapsedTime2.Milliseconds / 10);
+            string timeElapsed2 = String.Format("{0:00}:{1:00}", ElapsedTime2.Seconds, ElapsedTime2.Milliseconds);
             
             //show in console
             Console.WriteLine("Runtime crono1 " + timeElapsed1);
